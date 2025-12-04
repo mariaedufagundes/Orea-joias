@@ -111,13 +111,6 @@ section {
     text-align: center;
 }
 
-#icone-Barras,
-#icone-x,
-#menu_botao {
-    display: none;
-}
-
-
 .inicio a:hover{
     color:#b8860b
 }
@@ -141,6 +134,9 @@ h1 {
     gap: 5px;
 }
 
+
+
+
 .Fotos img{
     border-radius: 20px;
     width: 500px;
@@ -163,7 +159,83 @@ h1 {
     padding: 30px 0;
     font-size: 3.0rem;
 }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form input {
+    border: none;
+    border-bottom: 1px solid #333;
+}
     
+
+/* --- Container e Título --- */
+.Formulario {
+    max-width: 500px; /* Limita a largura do formulário */
+    margin: 40px auto; /* Centraliza o formulário na página */
+    padding: 20px;
+    background-color: var(--cor-fundo-claro);
+}
+
+.form-title {
+    text-align: center;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* --- Estrutura e Alinhamento --- */
+.contato-simples {
+    /* Faz com que os elementos internos se alinhem verticalmente */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adiciona espaçamento entre os elementos */
+}
+
+/* --- Estilo dos Rótulos (Labels) --- */
+.contato-simples label {
+    font-weight: bold;
+    color: var(--cor-texto);
+    margin-top: 10px; /* Espaço antes de cada rótulo */
+}
+
+/* --- Estilo dos Campos de Entrada (Input e Textarea) --- */
+.contato-simples input[type="text"],
+.contato-simples input[type="email"],
+.contato-simples textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Foco: Mudar a borda ao clicar */
+.contato-simples input:focus,
+.contato-simples textarea:focus {
+    border-color: var(--cor-primaria);
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+/* --- Estilo do Botão de Envio --- */
+.submit-button {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #6a0000; /* Cor mais escura ao passar o mouse */
+}
 
     
 
@@ -175,4 +247,61 @@ h1 {
 
 
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px){
+    #sombra{
+        background-color: var(--caramelo);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        right: -101vw;
+        transition: .5s;
+    }
+
+    #menu_botao{
+        display: block;
+        z-index: 1;
+    }
+
+    header{
+        position: relative;
+    }
+
+    header button{
+        width: 50px;
+
+        background: none;
+        border: none;
+
+        display: unset;
+        cursor: pointer;
+    }
+
+    header svg{
+        fill: var(--cafe);
+    }
+
+    #icone-barras{
+        display: block;
+    }
+
+    nav.menu{
+        width: 200px;
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 15px;
+
+        position: fixed;
+        top: 165px;
+        right: -210px;
+        z-index: 1;
+        transition: .5s;
+    }
+
+    .menu a{
+        color: var(--branco);
+    }
+}

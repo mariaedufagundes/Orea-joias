@@ -90,18 +90,45 @@
     </section>
 
 
-   
+
     <h1>Nossa empresa</h1>
 
     <section class="empresa" class="espaco_lateral">
-    <div class="Nossa-empresa">
-        <p>Inspirada pela beleza das formas naturais e pela riqueza simbólica
-            de cada material, peças únicas, produzidas com metais
-            reaproveitados e pedras naturais adquiridas de pequenos
-            produtores.
-        </p>
-    </div>
+        <div class="Nossa-empresa">
+            <p>Inspirada pela beleza das formas naturais e pela riqueza simbólica
+                de cada material, peças únicas, produzidas com metais
+                reaproveitados e pedras naturais adquiridas de pequenos
+                produtores.
+            </p>
+        </div>
     </section>
+
+
+
+    <h1 class="Lançamentos">Informações</h1>
+
+  <div class="formulario">
+    <form class="contato-simples" action="enviar-dados.php" method="POST">
+        
+        <h3 class="form-title">Entre em Contato Conosco</h3>
+
+        <label for="nome-completo">Nome Completo</label>
+        <input type="texto" id="nome-completo" name="nome" placeholder="Seu nome" required>
+
+        <label for="email-contato">E-mail</label>
+        <input type="email" id="email-contato" name="email" placeholder="email@exemplo.com" required>
+
+        <label for="mensagem-contato">Mensagem</label>
+        <textarea id="mensagem-contato" name="mensagem" rows="5" placeholder="Como podemos ajudar?"></textarea>
+
+        <button type="submit" class="submit-button">
+            Enviar Mensagem
+        </button>
+        
+    </form>
+</div>
+
+
 
 </body>
 
