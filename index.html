@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orea Joias</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+    <header class="espaco_lateral">
+
+        <div class="topo">
+
+            <div class="icones-iniciais">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-bag-heart" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+                </svg>
+
+            </div>
+            <div class="logo-center">
+                <img src="img/svg/Logo.svg" alt="Orea Joias Logo" class="logo-img">
+            </div>
+
+            <div class="icones">
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search-heart"
+                    viewBox="0 0 16 16">
+                    <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018" />
+                    <path
+                        d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11" />
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-info-circle-fill"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+                </svg>
+
+
+            </div>
+        </div>
+
+        <nav id="inicio" class="inicio">
+
+            <a href="#destaques">Destaques</a>
+            <a href="#nossa_empresa">Nossa empresa</a>
+            <a href="#lançamentos">Lançamentos</a>
+            <a href="#informações">Informações</a>
+
+        </nav>
+
+        <button id="menu_botao" onclick="abreFechaMenu()">
+            <svg id="icone-barras" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path
+                    d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+            </svg>
+
+            <svg id="icone-x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path
+                    d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z" />
+            </svg>
+        </button>
+
+
+    </header>
+
+    <img src="img/fotosite.png" alt="foto inicio site">
+
+    <h1>Destaques</h1>
+
+    <section class="Fotos" class="espacolateral">
+        <img src="./img/fotosol.png" alt="1">
+        <img src="./img/destaque3.png" alt="2">
+        <img src="./img/destaque2.png" alt="3">
+    </section>
+
+
+   
+    <h1>Nossa empresa</h1>
+
+    <section class="empresa" class="espaco_lateral">
+    <div class="Nossa-empresa">
+        <p>Inspirada pela beleza das formas naturais e pela riqueza simbólica
+            de cada material, peças únicas, produzidas com metais
+            reaproveitados e pedras naturais adquiridas de pequenos
+            produtores.
+        </p>
+    </div>
+    </section>
+
+</body>
+
+</html>
