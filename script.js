@@ -68,58 +68,64 @@ filtro_btn.forEach(button => {
 
 
 
+// script.js
+
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Captura os elementos necessários
     const track = document.getElementById('carouselTrack');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('carouselDots');
     
-    // Pega todos os slides
     const slides = Array.from(track.children);
-    // Calcula a largura de um único slide
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    // Define o índice do slide atual
+    // O JS automaticamente pega 800px aqui, ajustando o movimento.
+    const slideWidth = slides[0].getBoundingClientRect().width; 
+    const totalSlides = slides.length;
     let currentSlideIndex = 0;
 
-    // 2. Função para mover a trilha para o slide correto
-    const moveToSlide = (track, currentSlide, targetSlide) => {
-        // Calcula o quanto a trilha deve ser movida (em pixels)
-        const amountToMove = targetSlide.style.left;
-        
-        // Aplica a transformação CSS para deslizar
-        track.style.transform = `translateX(-${targetSlide.style.left})`; 
-        
-        currentSlideIndex = slides.indexOf(targetSlide);
-    };
-    
-    // 3. Posiciona todos os slides horizontalmente
-    // O objetivo é fazer o Slide 1 começar em 0px, Slide 2 em 400px, Slide 3 em 800px, etc.
+    // 1. Posiciona os slides
     slides.forEach((slide, index) => {
         slide.style.left = slideWidth * index + 'px';
     });
 
-    // 4. Lógica do botão 'Próximo'
-    nextBtn.addEventListener('click', () => {
-        if (currentSlideIndex < slides.length - 1) {
-            const nextIndex = currentSlideIndex + 1;
-            const nextSlide = slides[nextIndex];
-            moveToSlide(track, slides[currentSlideIndex], nextSlide);
-        } else {
-            // Volta para o primeiro slide (loop)
-            moveToSlide(track, slides[currentSlideIndex], slides[0]);
+    // 2. Move a trilha
+    const moveToSlide = (index) => {
+        if (index >= totalSlides) {
+            index = 0;
+        } else if (index < 0) {
+            index = totalSlides - 1;
         }
-    });
+        
+        const offset = slides[index].style.left;
+        track.style.transform = `translateX(-${offset})`; 
+        currentSlideIndex = index;
+        updateDots();
+    };
 
-    // 5. Lógica do botão 'Anterior'
-    prevBtn.addEventListener('click', () => {
-        if (currentSlideIndex > 0) {
-            const prevIndex = currentSlideIndex - 1;
-            const prevSlide = slides[prevIndex];
-            moveToSlide(track, slides[currentSlideIndex], prevSlide);
-        } else {
-            // Vai para o último slide (loop)
-            const lastIndex = slides.length - 1;
-            moveToSlide(track, slides[currentSlideIndex], slides[lastIndex]);
-        }
-    });
+    // 3. Cria os Dots
+    const generateDots = () => {
+        slides.forEach((_, index) => {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            
+            dot.addEventListener('click', () => {
+                moveToSlide(index);
+            });
+            dotsContainer.appendChild(dot);
+        });
+    };
+
+    // 4. Atualiza a aparência dos Dots
+    const updateDots = () => {
+        const dots = Array.from(dotsContainer.children);
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlideIndex);
+        });
+    };
+    
+    // 5. Controles Manuais
+    nextBtn.addEventListener('click', () => moveToSlide(currentSlideIndex + 1));
+    prevBtn.addEventListener('click', () => moveToSlide(currentSlideIndex - 1));
+
+    generateDots();
 });
