@@ -56,11 +56,12 @@ body {
     color: var(--cor-icones);
     width: 100px;
     height: 100px;
-    font-size: 1.8rem}
+    font-size: 1.8rem
+}
 
 
 
-    
+
 .logo-center {
     display: flex;
     flex-direction: column;
@@ -73,7 +74,7 @@ body {
 
 }
 
-.logo-center  {
+.logo-center {
     font-size: 1.5rem;
     margin-top: 5px;
     font-weight: normal;
@@ -101,11 +102,11 @@ body {
 }
 
 
-.foto-site{
+#banner {
     width: 100%;
     height: 100vh;
     background-image: url('img/fotosite.png');
-    
+
     background-size: cover;
     background-position: center top;
     margin-bottom: 60px;
@@ -118,25 +119,25 @@ section {
     text-align: center;
 }
 
-.inicio a:hover{
-    color:#b8860b
+.inicio a:hover {
+    color: #b8860b
 }
 
-h1 {
-    font-family: serif; 
-    font-weight: 400; 
+.h1 {
+    font-family: serif;
+    font-weight: 400;
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 330px;
     padding: 150px 0;
     font-size: 3.0rem;
-} 
+}
 
 
 
-.Fotos{
-   display: flex;
+.Fotos {
+    display: flex;
     justify-content: space-between;
     gap: 5px;
 }
@@ -144,17 +145,17 @@ h1 {
 
 
 
-.Fotos img{
+.Fotos img {
     border-radius: 20px;
     width: 500px;
     height: 500px;
 }
-   
 
 
-.Nossa-empresa{
- font-family: serif; 
-    font-weight: 500; 
+
+.Nossa-empresa {
+    font-family: serif;
+    font-weight: 500;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -164,38 +165,38 @@ h1 {
 }
 
 .formulario {
-  background-color: #b8860b;
-  padding: 10rem;
-  margin: 10rem;
-  border-radius: 20px;
-  text-align: center;
-  align-items: center;
+    background-color: #b8860b;
+    padding: 10rem;
+    margin: 10rem;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
 }
 
 
 .formulario input,
 .formulario textarea {
-  width: 80%;
-  padding: 0.5rem;
-  margin: 0.5rem 0;
-  border-radius: 10px;
-  border: none;
+    width: 80%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+    border: none;
 
 }
 
 .formulario button {
-  padding: 0.8rem 1rem;
-  border: none;
-  background-color: #E9E7E7;
-  color: #800000;
-  border-radius: 10px;
-  cursor: pointer;
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: #E9E7E7;
+    color: #800000;
+    border-radius: 10px;
+    cursor: pointer;
 
 }
 
 
 
-    
+
 
 .Informações {
     justify-content: center;
@@ -212,15 +213,10 @@ h1 {
 
 
 
-.rodape {
-  background-color: #404070;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+
+
+
+
 
 .coluna {
   flex: 1;
@@ -235,32 +231,20 @@ h1 {
   margin-bottom: 15px;
 }
 
-.equipe-img {
+.logo-img {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 
-.titulo-equipe {
-  font-weight: bold;
-  background-color: white;
-  color: #404070;
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
 
-.coluna.direita .texto-redes {
-  margin-bottom: 15px;
-  font-size: 16px;
-}
 
 .icones-redes {
   display: flex;
-  gap: 15px;
+  gap: 30px;
   width: 30%;
-  min-width: 70px;
+  min-width: 90px;
 }
 
 .icones-redes img {
@@ -303,6 +287,8 @@ h1 {
   margin-bottom: 15px;
   font-size: 30px;
   text-align: right;
+  margin-top: 70px;
+  margin-right:200px;
 }
 
 .icones-redes {
@@ -310,6 +296,8 @@ h1 {
   gap: 30px;
   float: right;
   width: 200px;
+  margin-top: 70px;
+  margin-right:200px ;
 }
 
 .icones-redes img {
@@ -331,120 +319,59 @@ h1 {
 
 
 .container {
-  position: relative;
-  width: 600px;
-  height: 300px;
+    position: relative;
+    width: 600px;
+    height: 300px;
 }
 
 .button {
-  position: absolute;
-  background-color: #d95319;
-  color: white;
-  font-size: 20px;
-  padding: 15px 30px;
- 
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
+    position: absolute;
+    background-color: #d95319;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #c04a16;
+    background-color: #c04a16;
 }
 
 
 .top-left {
-  top: 20px;
-  left: 50px;
+    top: 20px;
+    left: 50px;
 }
 
 .top-right {
-  top: 20px;
-  right: 50px;
+    top: 20px;
+    right: 50px;
 }
 
 .center {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .bottom-left {
-  bottom: 20px;
-  left: 50px;
+    bottom: 20px;
+    left: 50px;
 }
 
 .bottom-right {
-  bottom: 20px;
-  right: 50px;
+    bottom: 20px;
+    right: 50px;
 }
 
 
 
-
-
-.carousel-container {
-    position: relative;
-    width: 900px; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: #fff;
-}
-
-#carro-espaco{
-    display: flex;
-    justify-content: center;
-}
-
-.carousel-wrapper {
-    overflow: hidden; 
-    border-radius: 10px;
-}
-
-.carousel-track {
-    display: flex; 
-    transition: transform 0.6s ease-in-out; 
-}
-
-
-.carousel-slide {
-    min-width: 100%; 
-    height: 400px;  
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 20px;
-}
-
-.carousel-slide img {
-    width: 100%;
-    height: 800px; 
-    
-}
-
-
-
-.prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    z-index: 10;
-    font-size: 1.2em;
-    border-radius: 50%;
-}
-.prev-btn { left: 15px; }
-.next-btn { right: 15px; }
 
 
 
@@ -453,17 +380,40 @@ h1 {
 
 @media screen and (max-width: 1024px) {
 
-    header img {
-        width: 140px;
+    .logo-img {
+        width: 160px;
+        margin-right: 50px;
     }
 
     .topo {
         justify-content: space-between;
-align-items: center;
+        align-items: center;
     }
 
-    
-  
+    .icones-iniciais {
+        width: 80px;
+        margin-right: 50px;}
+
+    .icones {
+        width: 80px;
+      margin-right: 50px;
+    }
+
+   .banner {
+        height: 50vh;
+    }
+
+    .h1 {
+    font-family: serif;
+    font-weight: 200;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 320px;
+    padding: 150px 0;
+    font-size: .0rem;
+}
+
 
     #empresa {
         flex-direction: column;
@@ -498,7 +448,7 @@ align-items: center;
         margin: 0 auto;
     }
 
-    
+
 
     .conteudo_horarios {
         width: 80%;
@@ -510,15 +460,39 @@ align-items: center;
 
 @media screen and (max-width: 768px) {
     #sombra {
-        background-color: #800000;
+        background-color: #E9E7E7;
         backdrop-filter: blur(10px);
         z-index: 1;
         position: fixed;
-        width: 60vw;
-        height: 60vh;
+        width: 100vw;
+        height: 100vh;
         right: -101vw;
         transition: .5s;
     }
+
+ .logo-img {
+        width: 160px;
+        margin-right: 50px;
+    }
+
+    .topo {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .icones-iniciais {
+        width: 80px;
+        margin-right: 50px;}
+
+    .icones {
+        width: 80px;
+      margin-right: 50px;
+    }
+
+   .banner {
+        height: 50vh;
+    }
+
 
     #menu_botao {
         display: block;
@@ -539,7 +513,7 @@ align-items: center;
         cursor: pointer;
     }
 
-   
+
 
     #icone-barras {
         display: block;
@@ -569,8 +543,8 @@ align-items: center;
         background-position: 0 0;
     }
 
-  
-  
+
+
     .icones-redes {
         justify-content: center;
     }
@@ -583,7 +557,7 @@ align-items: center;
         flex-direction: column;
     }
 
-    
+
 
 }
 
